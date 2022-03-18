@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-image: linear-gradient(120deg, #1699d6, #2d3ea0);
+	color: white;
+	font-family: 'Ubuntu', sans-serif;
+	min-height: 100vh;
+}
+
+h2{
+    padding: 10px 0;
+}
+header {
+	font-size: 1.5rem;
+}
+
+header,
+.form-group {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.form-group input,
+.form-group button {
+	border: none;
+	background: white;
+    width: 53px;
+    height: 53px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    font-size: 20px;
+    outline: none;
+}
+
+.form-group input {
+	flex: 1;
+    padding: 0 10px;
+}
+
+.form-group button {
+	color: #1699d6;
+	background: white;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.form-group button:hover {
+	background: #1699d6;
+	color: white;
+}
+
+.todo-list,.completed-todo-list {
+	min-width: 30%;
+	list-style: none;
+    position: relative;
+}
+
+.todo {
+	margin: 0;
+	background: white;
+	color: black;
+	font-size: 1.5rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex: 1;
+	padding: 0 10px;
+}
+
+.todo li {
+	flex: 1;
+}
+
+.trash-btn,
+.complete-btn {
+    background: #ff6969;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: .4s ease;
+    -webkit-transition: .4s ease;
+    -moz-transition: .4s ease;
+    -ms-transition: .4s ease;
+    -o-transition: .4s ease;
+    width: 53px;
+    height: 53px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.trash-btn:hover{
+    width: 100px;
+    background: #b10000;
+}
+
+.complete-btn:hover{
+    width: 100px;
+	background: #009900;
+}
+.complete-btn {
+	background: #49cc49;
+}
+
+.todo-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: white;
+    margin-top: 3px;
+    transition: .4s ease;
+    -webkit-transition: .4s ease;
+    -moz-transition: .4s ease;
+    -ms-transition: .4s ease;
+    -o-transition: .4s ease;
+}
+
+.fa-trash,
+.fa-check {
+	pointer-events: none;
+}
+
+.completed {
+	text-decoration: line-through;
+	opacity: 0.5;
+}
+
+.fall {
+	transform: translateY(8rem) rotate(20deg);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 200px;
+}
+
+.container-child{
+    width: 560px;
+    max-width: 100%;
+    padding: 0 5px;
+}
+
+.falling{
+    animation: fall 1.5s forwards ease;
+    -webkit-animation: fall 1.5s forwards ease;
+}
+
+
+@keyframes fall {
+    from{
+        width: 100%;
+        position: absolute;
+    }
+    to{
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(8rem) rotate(20deg) scale(0);
+        -webkit-transform: translateY(8rem) rotate(20deg) scale(0);
+        -moz-transform: translateY(8rem) rotate(20deg) scale(0);
+        -ms-transform: translateY(8rem) rotate(20deg) scale(0);
+        -o-transform: translateY(8rem) rotate(20deg) scale(0);
+}
+}
